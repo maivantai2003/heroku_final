@@ -36,7 +36,7 @@ public class SecurityConfig {
                         .anyRequest().requiresSecure()
                 )
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/login", "/register", "/forgotpassword/**", "/resetpassword/**",
+                .requestMatchers("/login", "/register","/admin/dashboard","/forgotpassword/**", "/resetpassword/**",
                         "/error", "/css/**", "/js/**", "/image/**", "/font/**", "/oauth2/**")
                 .permitAll()
                 .requestMatchers("/admin/**").hasAuthority("ADMIN")

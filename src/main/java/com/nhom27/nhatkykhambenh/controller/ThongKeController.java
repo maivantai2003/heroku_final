@@ -50,7 +50,7 @@ public class ThongKeController {
     @Autowired
     private XetNghiemMapper xetNghiemMapper;
 
-    @GetMapping("users/dashboard")
+    @GetMapping("/admin/dashboard")
     public String Dashboard(Model model) {
 
         List<GiaDinhDTO> giaDinhDTOList = giaDinhMapper.toGiaDinhDtoList(
