@@ -9,11 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Controller
-//@RequestMapping("/admin")
+@RequestMapping("/admin")
 //@PreAuthorize("hasRole('ADMIN')")
 public class AdminController {
 
-    @GetMapping("admin")
+    //@GetMapping("admin")
+    @GetMapping("/dashboard")
     public String adminPage(HttpSession session) {
         List<String> roles = (List<String>) session.getAttribute("roles");
         System.out.println(roles);
