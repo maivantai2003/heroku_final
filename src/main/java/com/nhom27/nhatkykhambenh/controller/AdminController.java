@@ -10,7 +10,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/admin")
-//@PreAuthorize("hasRole('ADMIN')")
+@PreAuthorize("hasRole('ADMIN')")
 public class AdminController {
 
     @GetMapping("admin")
