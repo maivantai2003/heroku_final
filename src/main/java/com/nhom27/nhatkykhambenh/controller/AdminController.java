@@ -13,8 +13,7 @@ import java.util.List;
 //@PreAuthorize("hasRole('ADMIN')")
 public class AdminController {
 
-    //@GetMapping("admin")
-    @GetMapping("/dashboard")
+    @GetMapping("admin")
     public String adminPage(HttpSession session) {
         List<String> roles = (List<String>) session.getAttribute("roles");
         System.out.println(roles);
