@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Controller
-@RequestMapping("/admin")
+//@RequestMapping("/admin")
 //@PreAuthorize("hasRole('ADMIN')")
 public class AdminController {
 
@@ -18,8 +18,7 @@ public class AdminController {
         List<String> roles = (List<String>) session.getAttribute("roles");
         System.out.println(roles);
         if (roles == null || !roles.contains("ADMIN")) {
-            //return "redirect:/";
-            return "admin/dashboard";
+            return "redirect:/";
         }
         return "admin/dashboard";
     }

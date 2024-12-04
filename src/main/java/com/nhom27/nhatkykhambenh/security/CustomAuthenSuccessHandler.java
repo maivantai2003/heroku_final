@@ -40,7 +40,8 @@ public class CustomAuthenSuccessHandler implements AuthenticationSuccessHandler 
             request.getSession().setAttribute("taikhoan", taiKhoan);
             request.getSession().setAttribute("nguoidungLogged", nguoiDung);
 
-            response.sendRedirect("/");
+            //response.sendRedirect("/");
+            response.sendRedirect("/admin/dashboard");
         }
     }
 }
